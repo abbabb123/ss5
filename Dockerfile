@@ -12,10 +12,11 @@ RUN rm -rf /var/lib/apt/lists/*
 COPY ss5-3.8.9.tar.gz /ss5-3.8.9.tar.gz
 RUN tar zxvf ss5-3.8.9.tar.gz && cd /ss5-3.8.9 && make install && rm -rf /ss5-3.8.9
 
-RUN touch /etc/opt/ss5/ss5.passwd
+
 RUN touch /etc/opt/ss5/ss5.ha
 
 COPY conf/ss5.conf /etc/opt/ss5/ss5.conf
+COPY conf/ss5.passwd /etc/opt/ss5/
 
 EXPOSE 18080
 
