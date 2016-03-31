@@ -16,7 +16,7 @@ RUN tar zxvf ss5-3.8.9.tar.gz && cd /ss5-3.8.9 && make install && rm -rf /ss5-3.
 RUN touch /etc/opt/ss5/ss5.ha
 
 COPY conf/ss5.conf /etc/opt/ss5/ss5.conf
-COPY conf/ss5.passwd /etc/opt/ss5/
+COPY conf/ss5.passwd /etc/opt/ss5/ss5.passwd
 
 EXPOSE 18080
 
